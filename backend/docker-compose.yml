@@ -1,0 +1,57 @@
+services:
+
+  backend:
+
+    build:
+
+      context: .
+
+      dockerfile: Dockerfile
+
+    container_name: products-backend
+
+    ports:
+
+      - "3001:3001"
+
+    environment:
+
+      PORT: 3001
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: products_db
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN}
+    depends_on:
+
+      - postgres
+
+  postgres:
+
+    image: postgres:16-alpine
+
+    container_name: products-postgres
+
+    restart: unless-stopped
+
+    environment:
+
+      POSTGRES_USER: postgres
+
+      POSTGRES_PASSWORD: postgres
+
+      POSTGRES_DB: products_db
+
+    ports:
+
+      - "5432:5432"
+
+    volumes:
+
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+
+  postgres_data:

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ProductCard Snapshot should match the snapshot 1`] = `
+<div>
+  <div
+    class="bg-white/95 backdrop-blur-md border border-white/20 rounded-2xl p-5 shadow-xl transition-all hover:scale-[1.02] flex flex-col justify-between"
+  >
+    <div>
+      <h2
+        class="text-xl font-extrabold text-[#1B4D3E] tracking-tight"
+      >
+        Mouse Gamer
+      </h2>
+      <p
+        class="mt-2 text-slate-600 text-sm leading-relaxed"
+      >
+        A simple test product
+      </p>
+      <p
+        class="mt-3 text-xs font-semibold uppercase tracking-wider text-[#76A032] bg-[#76A032]/10 inline-block px-2.5 py-1 rounded-lg"
+      >
+        Categoria: 
+        Test Category
+      </p>
+    </div>
+    <div
+      class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between"
+    >
+      <span
+        class="text-lg font-black text-[#5B8C00]"
+      >
+        R$ 
+        199.99
+      </span>
+      <button
+        class="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition duration-200 shadow-sm cursor-pointer"
+      >
+        Deletar
+      </button>
+    </div>
+  </div>
+</div>
+`;
